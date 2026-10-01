@@ -30,3 +30,65 @@
 *.exe
 *.out
 *.app
+
+# Backup/old
+*.old
+*.backup
+
+# ==============================================================================
+# CMake Generated Files and Directories
+# ==============================================================================
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+Testing/
+Makefile
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+_deps/
+CMakeUserPresets.json
+
+# ==============================================================================
+# Common Build Directories
+# ==============================================================================
+# Ignores local standard build folders regardless of capitalization
+[Bb]uild/
+/build*/
+/out/
+
+# ==============================================================================
+# IDE-Specific Build and Configuration Directories
+# ==============================================================================
+# JetBrains CLion
+.idea/
+/cmake-build-*/
+
+# Visual Studio / VS Code
+.vs/
+.vscode/
+*.vc.db
+
+# Qt Creator
+CMakeLists.txt.user*
+
+# ==============================================================================
+# Compiled Binaries and Object Files
+# ==============================================================================
+*.exe
+*.out
+*.app
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.dylib
+*.dll
+
+# ==============================================================================
+# OS-Specific Files
+# ==============================================================================
+.DS_Store
+Thumbs.db

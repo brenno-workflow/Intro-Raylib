@@ -21,4 +21,4 @@ template<typename... Args>
 void print(std::format_string<Args...> format, Args&&... args)
 {
     std::println(format, std::forward<Args>(args)...);
-}
+};

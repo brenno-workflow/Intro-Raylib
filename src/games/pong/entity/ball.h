@@ -14,4 +14,5 @@ class Ball{
         // Functions
         void Draw();
         void Update();
+        void Reset();
 };

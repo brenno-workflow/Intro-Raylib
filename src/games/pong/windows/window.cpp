@@ -14,7 +14,7 @@ void Window::End()
     CloseWindow();
 }
 
-void Window::Background()
+void Window::Draw()
 {
     ClearBackground(__green);
     DrawLine(__width / 2, 0, __width / 2, __height, WHITE);

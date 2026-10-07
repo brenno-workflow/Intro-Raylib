@@ -55,8 +55,11 @@ void Pong1()
         if(CheckCollisionCircleRec(Vector2{ball.__x, ball.__y}, ball.__radius, Rectangle {enemy.__x, enemy.__y, enemy.__width, enemy.__height}))
             ball.__speed_x *= -1;
 
+        // Collision
+        // Score
+
         // Drawing
-        window.Background();
+        window.Draw();
         ball.Draw();
         player.Draw();
         enemy.Draw();

@@ -17,5 +17,5 @@ class Window{
         // Functions
         void Start();
         void End();
-        void Background();
+        void Draw();
 };

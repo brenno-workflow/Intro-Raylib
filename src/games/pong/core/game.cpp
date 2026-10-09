@@ -43,22 +43,38 @@ void Pong1()
         // Start
         BeginDrawing();
 
-        // Updating
+        // --- Updating ---
         ball.Update();
         player.Update();
         enemy.Update(ball.__y);
 
-        // Event
-        if(CheckCollisionCircleRec(Vector2{ball.__x, ball.__y}, ball.__radius, Rectangle {player.__x, player.__y, player.__width, player.__height}))
-            ball.__speed_x *= -1;
-
-        if(CheckCollisionCircleRec(Vector2{ball.__x, ball.__y}, ball.__radius, Rectangle {enemy.__x, enemy.__y, enemy.__width, enemy.__height}))
-            ball.__speed_x *= -1;
+        // --- Event ---
 
         // Collision
-        // Score
+        if(CheckCollisionCircleRec(Vector2{ball.__x, ball.__y}, ball.__radius, Rectangle {player.__x, player.__y, player.__width, player.__height}))
+        {
+            ball.__speed_x *= -1;
+        }
 
-        // Drawing
+        if(CheckCollisionCircleRec(Vector2{ball.__x, ball.__y}, ball.__radius, Rectangle {enemy.__x, enemy.__y, enemy.__width, enemy.__height}))
+        {
+            ball.__speed_x *= -1;
+        }
+
+        // Score
+        if (ball.__x + ball.__radius >= window.__width)
+        {
+            window.__enemy_score++;
+            ball.Reset();
+        }
+
+        if (ball.__x - ball.__radius <= 0)
+        {
+            window.__player_score++;
+            ball.Reset();
+        }
+
+        // --- Drawing ---
         window.Draw();
         ball.Draw();
         player.Draw();
